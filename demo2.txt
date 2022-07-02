@@ -4,3 +4,7 @@ git status
 git add
 git add .
 git commit -m 'initial commit'
+
+Then name;santosh
+user id= skarche22
+email=skarche22@gmail.com
