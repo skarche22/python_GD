@@ -1,0 +1,6 @@
+commond used uptill now
+git init
+git status
+git add
+git add .
+git commit -m 'initial commit'
