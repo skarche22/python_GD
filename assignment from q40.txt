@@ -1,0 +1,93 @@
+# # 40. Python program to check if a string is palindrome or not Reverse words in a given String in
+#
+str1=input("Enter a str:")
+if (str1==str1[::-1]):
+    print("yes")
+else:
+    print("no")
+
+
+# 41. Python Ways to remove i’th character from string
+
+str1=input("Enter a str:")
+ch=input("char to remove:")
+
+for i in str1:
+    if ch == i:
+        continue
+    else:
+        print(i,end=" ")
+
+# remove i’th character from string
+str1=input("Enter a str:")
+index=int(input("char to remove:"))
+
+for i in range(len(str1)):
+    if index == i:
+        continue
+    else:
+        print(str1[i],end="\n ")
+
+print(str1.replace(str1[index],""))
+
+# 42. Python | Check if a Substring is Present in a Given String 
+str1=input("Enter a str:")
+sub_str=input("Enter a sub str:")
+
+# if sub_str in str1:
+#     print("yes")
+# else:
+#     print("no")
+
+#2#  print(str1.find(sub_str))
+
+# #3# if str1.find(sub_str) >=0:
+#     print("yes")
+# else:
+#     print("no")
+
+##4#
+ind=" "
+try:
+    print(str1.index(sub_str))
+    if str1.index(sub_str)>=0:
+        print("yes")
+except:
+    print(str1.index(sub_str))
+    print("no")
+    
+if ind:
+    print("executed normally")
+else:
+    ("error")
+
+
+# 42(B)Find length of a string in python(4ways)
+
+str1=input("Enter a str:")
+
+##1
+count=0
+for i in str1:
+    count+=1
+print(count)
+
+##2
+
+i=0
+while str1[i:]:
+    i+=1
+print(i)
+#
+# ##3
+#
+print("length of str",len(str1))
+
+##4
+
+import functools
+str1=input("Enter a str:")
+def count1(str1):
+    return functools.reduce(lambda x,y:x+1,str1,0)
+
+print(functools.reduce(lambda x,y:x+1,str1,0))

@@ -1,0 +1,154 @@
+# # 25. Python program to print even numbers in a list
+#
+# l1=[1,2,3,4,5,6,7,8,9,10]
+# for i in l1:
+#     if i%2==0:
+#         print(i)
+#
+
+
+
+# # 35. Remove multiple elements from a list in Python
+# l1=[10,20,4,45,99,75,99,10,3,4,5,0]
+# l2=l1[2:7]
+#
+# x=[i for i in l1 if i not in l2]
+# # print(x)
+
+
+
+# 25. Python program to print even numbers in a list
+list1=[1,2,3,4,5,6,7]
+for i in list1:
+    if(i%2==0):
+        print(i)
+
+#by using lambda fn
+x=list(filter(lambda i :i%2==0,list1))
+print(x)
+x=tuple(filter(lambda i :i%2==0,list1))
+print(x)
+#by list comprhenesion
+x=[i for i in list1 if i%2==0]
+print(x)
+#by using step index
+for i in range(0,101,2):
+    print(i,end=",")
+
+
+# 26. Python program to print odd numbers in a List
+list1=[1,2,3,4,5,6,7]
+for i in list1:
+    if(i%2!=0):
+        print(i)
+
+#by using lambda fn
+x=list(filter(lambda i :i%2!=0,list1))
+print(x)
+x=tuple(filter(lambda i :i%2!=0,list1))
+print(x)
+
+#by list comprhenesion
+x=[i for i in list1 if i%2!=0]
+print(x)
+#by using step index
+for i in range(1,101,2):
+    print(i,end=",")
+
+
+# 29. Python program to count Even and Odd numbers in a List
+l1=[1,2,3,4,5,6,7,8,9,10,11,12,13]
+even=len(list(filter(lambda i:i%2==0,l1)))
+print(even)
+x=len(l1)
+print(x)
+y=x-even
+print(y)
+
+
+# 30. Python program to print positive numbers in a list
+l1=[-1,2,-3,4,5,6,-7,8,9,10,-11,-12,13,0]
+l=list(filter(lambda i:i>0,l1))
+print(l)
+
+#using for loop
+for i in (l1):
+    if (i>0):
+        print(i)
+
+
+# 31. Python program to print negative numbers in a list
+l1=[-1,2,-3,4,5,6,-7,8,9,10,-11,-12,13,0]
+l=list(filter(lambda i:i<0,l1))
+print(l)
+
+#using for loop
+for i in (l1):
+    if (i<0):
+        print(i)
+
+
+# 32. Python program to print all positive numbers in a range
+l1=[-1,2,-3,4,5,6,-7,8,9,10,-11,-12,13]
+print(len(l1))
+y=list(filter(lambda i:i>0,l1))
+print(y)
+# z=len(l1)-y
+# print(z)
+
+
+# 33. Python program to print all negative numbers in a range
+l1=[-1,2,-3,4,5,6,-7,8,9,10,-11,-12,13]
+print(len(l1))
+y=list(filter(lambda i:i<0,l1))
+print(y)
+
+
+# 34. Python program to count positive and negative numbers in a list
+# Python program to count positive and negative numbers in a list
+list1=[10,20,-30,-45,30,-43,43]
+count_po=0
+count_neg=0
+for i in list1:
+    if i>0:
+        count_po+=1
+    else:
+        count_neg+=1
+print("count postive : ",count_po)
+print("count negative : ",count_neg)
+
+l1=[-1,2,-3,4,5,6,-7,8,9,10,-11,-12,13]
+print(len(l1))
+y=len(list(filter(lambda i:i>0,l1)))
+print(y)
+z=len(l1)-y
+print(z)
+
+
+# 35. Remove multiple elements from a list in Python
+l1=[1,2,3,4,5,6,7,8]
+print(l1)
+b=len(l1)
+count=0
+while count<(b-2):
+    l1.pop()
+    count+=1
+print(l1)
+
+
+
+# 36. Python | Remove empty tuples from a list
+l1=[1,2,3,4,5,6,7,8,9,(),10,11,12,13]
+for i in l1:
+    if type(i) is int:
+        print(i,end=" ")
+
+# Using for loop
+m1=[1,2,3,(),4]
+for i in m1:
+    if type(i) is int:
+        print(i,end=" ")
+
+
+
+
